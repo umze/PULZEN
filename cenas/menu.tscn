@@ -1,0 +1,142 @@
+[gd_scene load_steps=11 format=3 uid="uid://brxglewyfe60r"]
+
+[ext_resource type="Script" uid="uid://dpv2yxcl4doex" path="res://scripts/menu.gd" id="1_hsu4v"]
+[ext_resource type="Texture2D" uid="uid://cx2xb4g3q8q3h" path="res://sprites/zumbizumbi.png" id="2_mmoso"]
+[ext_resource type="Texture2D" uid="uid://caoawkf276188" path="res://sprites/degrade.png" id="3_qvcyk"]
+[ext_resource type="Texture2D" uid="uid://1vwnuic2ubak" path="res://sprites/jogado.png" id="4_mmoso"]
+[ext_resource type="FontFile" uid="uid://cey0g31l5lbaj" path="res://fonts/VCR_OSD_MONO_1.001.ttf" id="5_qvcyk"]
+[ext_resource type="Texture2D" uid="uid://dacrvop6mht1m" path="res://sprites/wall/1.png" id="6_6l0hd"]
+[ext_resource type="Texture2D" uid="uid://b4lr2co5esfn4" path="res://logo.png" id="6_nxpqr"]
+[ext_resource type="Texture2D" uid="uid://b0pd5tvaynr07" path="res://sprites/wall/2.png" id="7_s4mth"]
+[ext_resource type="Texture2D" uid="uid://bvqk4frcbmha0" path="res://sprites/wall/cone.png" id="8_806vj"]
+[ext_resource type="PackedScene" uid="uid://uyf4328k6hgj" path="res://cenas/player.tscn" id="9_s4mth"]
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_hsu4v")
+
+[node name="Zumbizumbi" type="Sprite2D" parent="."]
+position = Vector2(631.25, 731.188)
+scale = Vector2(5.425, 5.425)
+texture = ExtResource("2_mmoso")
+
+[node name="Degrade" type="Sprite2D" parent="."]
+position = Vector2(945, 895)
+texture = ExtResource("3_qvcyk")
+
+[node name="Jogado" type="Sprite2D" parent="."]
+position = Vector2(271, 738)
+texture = ExtResource("4_mmoso")
+
+[node name="dontPlay" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = -31.0
+offset_right = 112.0
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.25, 1.25)
+theme_override_fonts/font = ExtResource("5_qvcyk")
+theme_override_font_sizes/font_size = 30
+text = "Não jogar"
+
+[node name="play" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = -31.0
+offset_right = 112.0
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.25, 1.25)
+theme_override_fonts/font = ExtResource("5_qvcyk")
+theme_override_font_sizes/font_size = 30
+text = "Jogar"
+
+[node name="parede" type="Sprite2D" parent="."]
+position = Vector2(-255, 69)
+scale = Vector2(3.597, 3.597)
+texture = ExtResource("6_6l0hd")
+
+[node name="5" type="Sprite2D" parent="parede"]
+position = Vector2(2.50225, 202.682)
+texture = ExtResource("6_6l0hd")
+
+[node name="4" type="Sprite2D" parent="parede"]
+position = Vector2(-0.556057, 177.659)
+texture = ExtResource("6_6l0hd")
+
+[node name="2" type="Sprite2D" parent="parede"]
+position = Vector2(-2.50223, 28.3588)
+scale = Vector2(0.791727, 0.791727)
+texture = ExtResource("7_s4mth")
+
+[node name="3" type="Sprite2D" parent="parede"]
+position = Vector2(-0.834068, 99.5337)
+scale = Vector2(0.791727, 0.791727)
+texture = ExtResource("7_s4mth")
+
+[node name="6" type="Sprite2D" parent="parede"]
+position = Vector2(-0.556042, 231.875)
+scale = Vector2(0.791727, 0.791727)
+texture = ExtResource("7_s4mth")
+
+[node name="Cone4" type="Sprite2D" parent="parede"]
+position = Vector2(10.8452, 132.065)
+scale = Vector2(0.269407, 0.269407)
+texture = ExtResource("8_806vj")
+
+[node name="Cone5" type="Sprite2D" parent="parede"]
+position = Vector2(2.2264, 265.24)
+scale = Vector2(0.269407, 0.269407)
+texture = ExtResource("8_806vj")
+
+[node name="Cone" type="Sprite2D" parent="parede"]
+position = Vector2(12.0942, 52.9642)
+scale = Vector2(0.273683, 0.273683)
+texture = ExtResource("8_806vj")
+
+[node name="Cone6" type="Sprite2D" parent="parede"]
+position = Vector2(10.8452, 141.796)
+scale = Vector2(0.269407, 0.269407)
+texture = ExtResource("8_806vj")
+
+[node name="Cone7" type="Sprite2D" parent="parede"]
+position = Vector2(2.2264, 274.971)
+scale = Vector2(0.269407, 0.269407)
+texture = ExtResource("8_806vj")
+
+[node name="Cone2" type="Sprite2D" parent="parede"]
+position = Vector2(12.0942, 62.6951)
+scale = Vector2(0.273683, 0.273683)
+texture = ExtResource("8_806vj")
+
+[node name="Cone8" type="Sprite2D" parent="parede"]
+position = Vector2(10.0112, 152.639)
+scale = Vector2(0.269407, 0.269407)
+texture = ExtResource("8_806vj")
+
+[node name="Cone3" type="Sprite2D" parent="parede"]
+position = Vector2(11.2601, 73.5382)
+scale = Vector2(0.273683, 0.273683)
+texture = ExtResource("8_806vj")
+
+[node name="Player" parent="." instance=ExtResource("9_s4mth")]
+position = Vector2(-300, 41)
+scale = Vector2(5, 5)
+
+[node name="Logo" type="Sprite2D" parent="."]
+position = Vector2(1176.3285, 778.3098)
+scale = Vector2(0.64201885, 0.6420189)
+texture = ExtResource("6_nxpqr")
+
+[connection signal="pressed" from="dontPlay" to="." method="_on_dont_play_pressed"]
+[connection signal="pressed" from="play" to="." method="_on_play_pressed"]

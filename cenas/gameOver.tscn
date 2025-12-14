@@ -1,0 +1,91 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1louc1fiht5r"]
+
+[ext_resource type="FontFile" uid="uid://cey0g31l5lbaj" path="res://fonts/VCR_OSD_MONO_1.001.ttf" id="1_am1rn"]
+[ext_resource type="Script" uid="uid://cylukov8y83j5" path="res://scripts/game_over.gd" id="1_vehdq"]
+
+[node name="GameOver" type="Node2D"]
+script = ExtResource("1_vehdq")
+
+[node name="FimDeJogo" type="RichTextLabel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -317.5
+offset_top = -117.0
+offset_right = 317.5
+offset_bottom = 117.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(317.5, 117)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_am1rn")
+theme_override_font_sizes/normal_font_size = 71
+text = "Fim de jogo"
+tab_size = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Scorew" type="RichTextLabel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -287.0
+offset_top = 14.0
+offset_right = 289.0
+offset_bottom = 105.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_am1rn")
+theme_override_font_sizes/normal_font_size = 31
+text = "Pontuação de Noob"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[node name="PlayAgain" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -188.5
+offset_top = -62.0
+offset_right = 188.5
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(188.5, 62)
+theme_override_fonts/font = ExtResource("1_am1rn")
+theme_override_font_sizes/font_size = 30
+text = "Jogar de novo"
+
+[node name="NoPlayAgain" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -188.5
+offset_top = -62.0
+offset_right = 188.5
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(188.5, 62)
+theme_override_fonts/font = ExtResource("1_am1rn")
+theme_override_font_sizes/font_size = 30
+text = "Não jogar de novo"
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="PlayAgain" to="." method="_on_play_again_pressed"]
+[connection signal="pressed" from="NoPlayAgain" to="." method="_on_no_play_again_pressed"]

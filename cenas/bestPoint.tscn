@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdkusfop4u51o"]
+
+[ext_resource type="FontFile" uid="uid://cey0g31l5lbaj" path="res://fonts/VCR_OSD_MONO_1.001.ttf" id="1_txf0c"]
+
+[node name="BestPoint" type="Node2D"]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_right = 684.0
+offset_bottom = 185.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_txf0c")
+theme_override_font_sizes/normal_font_size = 41
+bbcode_enabled = true
+text = "melhor pontuação: "

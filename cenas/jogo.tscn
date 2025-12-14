@@ -1,0 +1,186 @@
+[gd_scene load_steps=18 format=3 uid="uid://yx0ph2kp3dpw"]
+
+[ext_resource type="Script" uid="uid://csmo7nabihdml" path="res://scripts/jogo.gd" id="1_32vai"]
+[ext_resource type="PackedScene" uid="uid://uyf4328k6hgj" path="res://cenas/player.tscn" id="1_k46e6"]
+[ext_resource type="PackedScene" uid="uid://qs4mhtk2fieu" path="res://cenas/text.tscn" id="4_bkotw"]
+[ext_resource type="PackedScene" uid="uid://cdkusfop4u51o" path="res://cenas/bestPoint.tscn" id="5_dmxwg"]
+[ext_resource type="Texture2D" uid="uid://dacrvop6mht1m" path="res://sprites/wall/1.png" id="5_dtkcs"]
+[ext_resource type="Texture2D" uid="uid://b0pd5tvaynr07" path="res://sprites/wall/2.png" id="6_dtkcs"]
+[ext_resource type="Texture2D" uid="uid://bvqk4frcbmha0" path="res://sprites/wall/cone.png" id="7_srya6"]
+[ext_resource type="PackedScene" uid="uid://bvl1hicknoksf" path="res://cenas/wall.tscn" id="8_v6mw0"]
+[ext_resource type="Texture2D" uid="uid://cm30lp7cic4or" path="res://sprites/powerup/bean.png" id="9_c77ad"]
+[ext_resource type="AudioStream" uid="uid://b5f4lkv6etply" path="res://sfx/musica.mp3" id="10_kfigh"]
+[ext_resource type="AudioStream" uid="uid://uv52cymy1ywt" path="res://sfx/peido.mp3" id="10_s5cfb"]
+[ext_resource type="Texture2D" uid="uid://dlxfp2qsknuer" path="res://sprites/peido/peido.png" id="12_105i5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8tqj5"]
+atlas = ExtResource("12_105i5")
+region = Rect2(708, 0, 236, 198)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c8qsu"]
+atlas = ExtResource("12_105i5")
+region = Rect2(472, 0, 236, 198)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lcfgm"]
+atlas = ExtResource("12_105i5")
+region = Rect2(236, 0, 236, 198)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mikth"]
+atlas = ExtResource("12_105i5")
+region = Rect2(0, 0, 236, 198)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8bbpn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8tqj5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c8qsu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lcfgm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mikth")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_32vai")
+
+[node name="Player" parent="." instance=ExtResource("1_k46e6")]
+position = Vector2(135, 41)
+scale = Vector2(5, 5)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="Text" parent="." instance=ExtResource("4_bkotw")]
+position = Vector2(20, 977)
+scale = Vector2(1.005, 1.005)
+
+[node name="BestPoint" parent="." instance=ExtResource("5_dmxwg")]
+position = Vector2(18, 1030)
+
+[node name="1" type="Sprite2D" parent="."]
+position = Vector2(240, 69)
+scale = Vector2(3.59677, 3.59677)
+texture = ExtResource("5_dtkcs")
+
+[node name="5" type="Sprite2D" parent="1"]
+position = Vector2(2.50225, 202.682)
+texture = ExtResource("5_dtkcs")
+
+[node name="4" type="Sprite2D" parent="1"]
+position = Vector2(-0.556046, 177.659)
+texture = ExtResource("5_dtkcs")
+
+[node name="2" type="Sprite2D" parent="1"]
+position = Vector2(-2.50224, 28.3588)
+scale = Vector2(0.791727, 0.791727)
+texture = ExtResource("6_dtkcs")
+
+[node name="3" type="Sprite2D" parent="1"]
+position = Vector2(-0.834076, 99.5337)
+scale = Vector2(0.791727, 0.791727)
+texture = ExtResource("6_dtkcs")
+
+[node name="6" type="Sprite2D" parent="1"]
+position = Vector2(-0.556046, 231.875)
+scale = Vector2(0.791727, 0.791727)
+texture = ExtResource("6_dtkcs")
+
+[node name="Cone4" type="Sprite2D" parent="1"]
+position = Vector2(10.8452, 132.065)
+scale = Vector2(0.269407, 0.269407)
+texture = ExtResource("7_srya6")
+
+[node name="Cone5" type="Sprite2D" parent="1"]
+position = Vector2(2.2264, 265.24)
+scale = Vector2(0.269407, 0.269407)
+texture = ExtResource("7_srya6")
+
+[node name="Cone" type="Sprite2D" parent="1"]
+position = Vector2(12.0942, 52.9642)
+scale = Vector2(0.273683, 0.273683)
+texture = ExtResource("7_srya6")
+
+[node name="Cone6" type="Sprite2D" parent="1"]
+position = Vector2(10.8452, 141.796)
+scale = Vector2(0.269407, 0.269407)
+texture = ExtResource("7_srya6")
+
+[node name="Cone7" type="Sprite2D" parent="1"]
+position = Vector2(2.2264, 274.971)
+scale = Vector2(0.269407, 0.269407)
+texture = ExtResource("7_srya6")
+
+[node name="Cone2" type="Sprite2D" parent="1"]
+position = Vector2(12.0942, 62.6951)
+scale = Vector2(0.273683, 0.273683)
+texture = ExtResource("7_srya6")
+
+[node name="Cone8" type="Sprite2D" parent="1"]
+position = Vector2(10.0112, 152.639)
+scale = Vector2(0.269407, 0.269407)
+texture = ExtResource("7_srya6")
+
+[node name="Cone3" type="Sprite2D" parent="1"]
+position = Vector2(11.2601, 73.5382)
+scale = Vector2(0.273683, 0.273683)
+texture = ExtResource("7_srya6")
+
+[node name="Wall" parent="." instance=ExtResource("8_v6mw0")]
+position = Vector2(298, 519)
+scale = Vector2(1, 35.455)
+
+[node name="Bean" type="Sprite2D" parent="."]
+position = Vector2(124.74993, 1034.7501)
+scale = Vector2(0.8492043, 0.8492045)
+texture = ExtResource("9_c77ad")
+
+[node name="beanNumber" type="RichTextLabel" parent="."]
+z_index = 4096
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -136.0
+offset_top = -40.0
+offset_right = -69.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(33.5, 33.5)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 31
+text = "0 "
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="musica épica" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_kfigh")
+volume_db = -27.171
+autoplay = true
+parameters/looping = true
+
+[node name="peido" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_s5cfb")
+volume_db = -11.244
+
+[node name="peido2" type="AnimatedSprite2D" parent="."]
+position = Vector2(-517, 116.00001)
+scale = Vector2(0.17929296, 0.17929296)
+sprite_frames = SubResource("SpriteFrames_8bbpn")
+frame = 3
+frame_progress = 0.77218354
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

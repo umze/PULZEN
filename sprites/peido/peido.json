@@ -1,0 +1,50 @@
+{ "frames": {
+   "Sprite-0001 0.": {
+    "frame": { "x": 0, "y": 0, "w": 236, "h": 198 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 236, "h": 198 },
+    "sourceSize": { "w": 236, "h": 198 },
+    "duration": 250
+   },
+   "Sprite-0001 1.": {
+    "frame": { "x": 236, "y": 0, "w": 236, "h": 198 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 236, "h": 198 },
+    "sourceSize": { "w": 236, "h": 198 },
+    "duration": 250
+   },
+   "Sprite-0001 2.": {
+    "frame": { "x": 472, "y": 0, "w": 236, "h": 198 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 236, "h": 198 },
+    "sourceSize": { "w": 236, "h": 198 },
+    "duration": 250
+   },
+   "Sprite-0001 3.": {
+    "frame": { "x": 708, "y": 0, "w": 236, "h": 198 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 236, "h": 198 },
+    "sourceSize": { "w": 236, "h": 198 },
+    "duration": 250
+   }
+ },
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.x-dev",
+  "image": "peido.png",
+  "format": "RGBA8888",
+  "size": { "w": 944, "h": 198 },
+  "scale": "1",
+  "frameTags": [
+  ],
+  "layers": [
+   { "name": "Layer 1", "opacity": 255, "blendMode": "normal" }
+  ],
+  "slices": [
+  ]
+ }
+}

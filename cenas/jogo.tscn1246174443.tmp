@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://yx0ph2kp3dpw"]
+
+[ext_resource type="Script" uid="uid://csmo7nabihdml" path="res://scripts/jogo.gd" id="1_32vai"]
+[ext_resource type="PackedScene" uid="uid://uyf4328k6hgj" path="res://cenas/player.tscn" id="1_k46e6"]
+[ext_resource type="PackedScene" uid="uid://bvl1hicknoksf" path="res://cenas/wall.tscn" id="3_1frua"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_32vai")
+
+[node name="Player" parent="." instance=ExtResource("1_k46e6")]
+position = Vector2(54, 41)
+scale = Vector2(5, 5)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="Wall" parent="." instance=ExtResource("3_1frua")]
+position = Vector2(178, 715)
+scale = Vector2(1, 43.425)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

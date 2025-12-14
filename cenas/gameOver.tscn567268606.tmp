@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1louc1fiht5r"]
+
+[ext_resource type="FontFile" uid="uid://cey0g31l5lbaj" path="res://fonts/VCR_OSD_MONO_1.001.ttf" id="1_am1rn"]
+[ext_resource type="Script" uid="uid://cylukov8y83j5" path="res://scripts/game_over.gd" id="1_vehdq"]
+
+[node name="GameOver" type="Node2D"]
+script = ExtResource("1_vehdq")
+
+[node name="FimDeJogo" type="RichTextLabel" parent="."]
+offset_left = 285.0
+offset_top = 152.0
+offset_right = 878.0
+offset_bottom = 334.0
+theme_override_fonts/normal_font = ExtResource("1_am1rn")
+theme_override_font_sizes/normal_font_size = 66
+text = "Fim de jogo :("
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Pontuacao" type="RichTextLabel" parent="."]
+offset_left = 69.9436
+offset_top = 224.042
+offset_right = 109.944
+offset_bottom = 264.042
+
+[node name="Button" type="Button" parent="."]
+offset_left = 117.0
+offset_top = 363.0
+offset_right = 465.0
+offset_bottom = 469.0
